@@ -1,15 +1,14 @@
 # Mancala Game
+AI decision-making process:
+Before starting the evaluation of the board states, the board fields to be used in the analysis should be extracted and evaluated. A decision must then be made to select the most promising moves. The selection starts from the root of the tree. The program then creates descendant nodes in a loop until it reaches a value symbolising the leaf of the tree. Once the loop is complete, the program runs simulations based on the selected nodes until the final depth of the tree is reached. During this process, the program saves the node with which the simulation finished best. Through back propagation, the information in the nodes is updated.
 
-Implementation of 3 different heuristics for the functions: evaluation of game board states and decision making:
-- Monte Carlo
-Before starting the evaluation of the game board states, extract and evaluate the board squares that will be used in the analysis. Then making a decision to choose the most promising moves. The selection starts from the root of the tree. Then the method creates descendant nodes in a loop until it reaches a value which symbolises a leaf of the tree. 
-The method plays out simulations based on the selected nodes, up to the final depth of the tree. During this process, the program saves the node with which the simulation went best.  Through back propagation, the information in the nodes is updated.
+Implementation of 2 different heuristics for the functions evaluation of game board states and decision making:
+- Minimax algorithm
+The minimax algorithm performs a depth-first search algorithm for the exploration of the complete game tree. <br />
+In this algorithm two players play the game, one is called MAX and other is called MIN. Both the players fight it as the opponent player gets the minimum benefit while they get the maximum benefit. Both Players of the game are opponent of each other, where MAX will select the maximized value and MIN will select the minimized value.
 
-- Monte Carlo - informed
-evaluates the state of the board and makes a decision to select the most promising moves. The selection starts with determining the number of iterations of the observed nodes. The program proceeds to analyse the fields of the game board and the possible points, stored in the moveScore table. Points are counted based on the player's selected moves from the availableMoves array, which is a decision to select the most promising moves.
- 
-- Monte Carlo - random
-Evaluation of the state of the board is undertaken randomly.
+
+- Alpha–beta pruning
 
 Comparison of the number of moves AI winning vs AI with algorithm 
 min-max vs alpha-beta for different tree depths:
@@ -22,6 +21,5 @@ min-max vs alpha-beta for different tree depths:
 ![Screenshot](Mancala.png)
 
 Visualization of game board:
-
 
 ![Screenshot](MancalaConsole.png)
