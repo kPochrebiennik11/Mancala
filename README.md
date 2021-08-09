@@ -21,7 +21,7 @@ min-max vs alpha-beta for different tree depths:
 
 ![Screenshot](Mancala.png)
 
-Visualization of game board state
+Visualization of game board:
 
 
 ![Screenshot](MancalaConsole.png)
