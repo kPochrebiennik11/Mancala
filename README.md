@@ -19,7 +19,7 @@ min-max vs alpha-beta for different tree depths:
 - tree depth = 6,
 - tree depth = 7,
 
-...
+![Screenshot](Mancala.png)
 
 Visualization of game board state
 
